@@ -14,6 +14,7 @@ const Navbar = () => {
       <Link to="/movies">movies</Link>
       <Link to="/state-up">state up</Link>
       <Link to="/converter">convertisseur</Link>
+      <Link to="/todo-list">Todo list</Link>
     </div>
   )
 }

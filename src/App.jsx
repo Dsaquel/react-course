@@ -10,6 +10,7 @@ import Arrays from './pages/Arrays'
 import Movies from './pages/Movies'
 import StateUp from './pages/StateUp'
 import Converter from './pages/Converter'
+import TodoList from './pages/TodoList'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/state-up" element={<StateUp />} />
         <Route path="/converter" element={<Converter />} />
+        <Route path="/todo-list" element={<TodoList />} />
       </Routes>
     </BrowserRouter>
   )

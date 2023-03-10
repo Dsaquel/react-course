@@ -1,7 +1,13 @@
 import { useState } from 'react'
 import './todo.css'
 
-const Todo = ({ todoName, index, handleDeleteTodo, handleUpdateTodo }) => {
+const Todo = ({
+  todoName,
+  index,
+  handleDeleteTodo,
+  handleUpdateTodo,
+  handleUpdatePositionTodo,
+}) => {
   const [isUpdateShow, setIsUpdateShow] = useState(false)
   const [todoInputNameUpdate, setTodoInputNameUpdate] = useState(todoName)
 
@@ -13,6 +19,10 @@ const Todo = ({ todoName, index, handleDeleteTodo, handleUpdateTodo }) => {
     <div className="todo">
       <div>{todoName}</div>
       <button onClick={() => handleDeleteTodo(index)}>delete</button>
+      <button onClick={() => handleUpdatePositionTodo('up', index)}>up</button>
+      <button onClick={() => handleUpdatePositionTodo('down', index)}>
+        down
+      </button>
       <button onClick={() => setIsUpdateShow(!isUpdateShow)}>
         Autre solution
       </button>

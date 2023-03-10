@@ -1,21 +1,19 @@
 import { useState } from 'react'
 
-const FormTodoList = ({ todos, setTodos }) => {
-  const [todoName, setTodoName] = useState('')
+const FormTodoList = ({ setTodos }) => {
+  const [todoInputName, setTodoInputName] = useState('')
 
   function handleSubmit(e) {
     e.preventDefault()
-    if (!todoName.length) return
-    const todosTemp = [...todos]
-    todosTemp.push(todoName)
-    setTodos(todosTemp)
-    setTodoName('')
+    if (!todoInputName.length) return
+    setTodos((todos) => [...todos, todoInputName])
+    setTodoInputName('')
   }
   return (
     <form onSubmit={handleSubmit}>
       <input
-        value={todoName}
-        onChange={(e) => setTodoName(e.target.value)}
+        value={todoInputName}
+        onChange={(e) => setTodoInputName(e.target.value)}
         type="text"
       />
       <button type="submit">Enregistrer le todo</button>

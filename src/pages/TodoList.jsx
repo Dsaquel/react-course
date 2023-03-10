@@ -6,7 +6,7 @@ const TodoList = () => {
   const [todos, setTodos] = useState(['blabla', 'blibli'])
   return (
     <div>
-      <FormTodoList todos={todos} setTodos={setTodos} />
+      <FormTodoList setTodos={setTodos} />
       <Todos todos={todos} setTodos={setTodos} />
     </div>
   )

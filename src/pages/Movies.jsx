@@ -7,9 +7,7 @@ const Movies = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const moviesTemp = [...movies]
-    moviesTemp.push(movieInput)
-    setMovies(moviesTemp)
+    setMovies([...movies, movieInput])
     setMovieInput('')
   }
 
